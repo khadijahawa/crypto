@@ -2,8 +2,9 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Layout } from "antd";
 
-import { Homepage, Cryptocurrencies, Navbar, Currency } from "./components";
-import "./App.css";
+import Homepage from "./pages/Homepage";
+import Navbar from "./components/Navbar";
+import Loader from "./components/Loader";
 
 const App = () => (
   <div className="app">
@@ -17,11 +18,8 @@ const App = () => (
             <Route exact path="/">
               <Homepage />
             </Route>
-            <Route exact path="/cryptocurrencies">
-              <Cryptocurrencies />
-            </Route>
-            <Route exact path="/Currency">
-              <Currency />
+            <Route exact path="/Loader">
+              <Loader />
             </Route>
           </Switch>
         </div>
