@@ -11,10 +11,12 @@ const SearchCoin = ({ searchCoin, toggle, onAdd }) => {
     >
       <img
         src={searchCoin.image}
+        style={{ height: "30px", width: "30px", alignSelf: "center" }}
         alt=""
-        style={{ height: "30px", width: "30px" }}
       />
+
       <p>{searchCoin.name}</p>
+
       <p>{searchCoin.symbol.toUpperCase()}</p>
       <p>
         {new Intl.NumberFormat("en-IN", {

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BsFillTrashFill } from "react-icons/bs";
 import AddTxBtn from "./AddTxBtn";
 import AddForm from "./AddForm";
-// import styles from "./style.module.css";
+import styles from "./style.module.css";
 
 const Coin = ({ coin, onDelete, updateCoin }) => {
   const [showForm, setShowForm] = useState(false);
@@ -26,16 +26,17 @@ const Coin = ({ coin, onDelete, updateCoin }) => {
             toggleForm();
           }
         }}
+        className={styles.coinC}
       >
-        <div>
+        <div className={styles.coin}>
           <img
             src={coin.image}
             alt=""
             style={{ height: "30px", width: "30px" }}
           />
-          <p className="nothing">{coin.name}</p>
+          <p>{coin.name}</p>
 
-          <div className="">
+          <div>
             <span>Current Price</span>
             <p title="Hooray!">
               {new Intl.NumberFormat("en-IN", {

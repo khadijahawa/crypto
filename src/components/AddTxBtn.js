@@ -1,4 +1,4 @@
-// import styles from "./style.module.css";
+import styles from "./style.module.css";
 
 const AddTxBtn = ({ setShowForm, showForm }) => {
   return (
@@ -6,8 +6,9 @@ const AddTxBtn = ({ setShowForm, showForm }) => {
       onClick={() => {
         setShowForm(!showForm);
       }}
+      className={styles.btnPart}
     >
-      <button>Add coins</button>
+      <button className={styles.toggle}>Add coins</button>
     </div>
   );
 };

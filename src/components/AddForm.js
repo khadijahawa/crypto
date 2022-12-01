@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BsXCircleFill } from "react-icons/bs";
 import { useTransition } from "react-spring";
+import styles from "./style.module.css";
 
 const AddForm = ({ toggleForm, coin, updateCoin }) => {
   // Set the cost of each coin and the amount bought of said coin.
@@ -42,15 +43,14 @@ const AddForm = ({ toggleForm, coin, updateCoin }) => {
     (style, item) =>
       item && (
         <>
-          <div className="form-mask" onClick={toggleForm}></div>
           <form
             style={style}
             onSubmit={displayWorth}
-            className="form-container containerzz"
+            className={styles.containerzz}
           >
             <BsXCircleFill onClick={toggleForm} />
             <p style={{ fontWeight: "bold" }}>{coin.name}</p>
-            <label>Cost per coin:</label>
+            <label className={styles.toggle}>Cost per coin:</label>
             <input
               step="any"
               className="input-style"
@@ -62,7 +62,7 @@ const AddForm = ({ toggleForm, coin, updateCoin }) => {
                 setCost(e.target.value);
               }}
             />
-            <label>Amount bought:</label>
+            <label className={styles.toggle}>Amount bought:</label>
             <input
               type="number"
               maxLength="10"

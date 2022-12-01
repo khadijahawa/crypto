@@ -1,9 +1,23 @@
-// import styles from "./style.module.css";
+import styles from "./style.module.css";
 
 const ToggleBtn = ({ toggle, toggleSearch }) => {
   return (
-    <div onClick={toggle}>
-      {toggleSearch ? <button> Add New</button> : <button> Add New</button>}
+    <div onClick={toggle} className={styles.homeButton}>
+      {toggleSearch ? (
+        <button
+          style={{ color: "#0071bd", textDecoration: "none" }}
+          className={styles.toggle}
+        >
+          Add New
+        </button>
+      ) : (
+        <button
+          style={{ color: "#0071bd", textDecoration: "none" }}
+          className={styles.toggle}
+        >
+          Add New
+        </button>
+      )}
     </div>
   );
 };

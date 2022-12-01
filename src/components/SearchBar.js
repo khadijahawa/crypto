@@ -17,7 +17,7 @@ const SearchBar = ({ apiCoins, toggle, onAdd }) => {
             setSearchTerm(e.target.value);
           }}
         />
-        <div>
+        <div className={styles.searchList}>
           {apiCoins.data
             .filter((value) => {
               if (searchTerm === "") {

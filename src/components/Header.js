@@ -18,7 +18,7 @@ const Header = ({ coins }) => {
   getTotal();
 
   return (
-    <div className={styles.header}>
+    <div className={styles.total}>
       <h1>
         {new Intl.NumberFormat("en-IN", {
           style: "currency",
