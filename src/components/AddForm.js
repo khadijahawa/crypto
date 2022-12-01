@@ -50,10 +50,9 @@ const AddForm = ({ toggleForm, coin, updateCoin }) => {
           >
             <BsXCircleFill onClick={toggleForm} />
             <p style={{ fontWeight: "bold" }}>{coin.name}</p>
-            <label className={styles.toggle}>Cost per coin:</label>
+            <label className={styles.homeText}>Cost per coin:</label>
             <input
               step="any"
-              className="input-style"
               type="number"
               maxLength="10"
               value={cost}
@@ -61,8 +60,9 @@ const AddForm = ({ toggleForm, coin, updateCoin }) => {
               onChange={(e) => {
                 setCost(e.target.value);
               }}
+              className={styles.btnPart}
             />
-            <label className={styles.toggle}>Amount bought:</label>
+            <label className={styles.homeText}>Amount bought:</label>
             <input
               type="number"
               maxLength="10"
@@ -72,8 +72,9 @@ const AddForm = ({ toggleForm, coin, updateCoin }) => {
               onChange={(e) => {
                 setAmount(e.target.value);
               }}
+              className={styles.btnPart}
             />
-            <input type="submit" value="Add coin" />
+            <input type="submit" value="Add coin" className={styles.addCoin} />
           </form>
         </>
       )

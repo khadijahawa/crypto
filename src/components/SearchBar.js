@@ -16,6 +16,13 @@ const SearchBar = ({ apiCoins, toggle, onAdd }) => {
           onChange={(e) => {
             setSearchTerm(e.target.value);
           }}
+          style={{
+            width: "250%",
+            borderRadius: 10,
+            height: 35,
+            margin: 10,
+            textAlign: "center",
+          }}
         />
         <div className={styles.searchList}>
           {apiCoins.data
