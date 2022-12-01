@@ -33,6 +33,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 50%;
 }
 
 .searchC {
@@ -82,14 +83,18 @@
 }
 
 .coin {
-  height: auto;
-  border: none;
+  width: auto;
+  margin: 3px;
+  background-color: #f3f8fc;
 }
 
 .coinC {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 3px;
+  background-color: #f3f8fc;
 }
 
 .total {
@@ -109,7 +114,9 @@
   text-align: center;
   margin: 3%;
   padding: 3%;
-  width: 100%;
+  width: 300%;
+  border: 3px;
+  background-color: #f3f8fc;
 }
 
 .addCoin {

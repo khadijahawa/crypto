@@ -64,16 +64,8 @@ const Coin = ({ coin, onDelete, updateCoin }) => {
 
           {/* Profit or Loss */}
           {(coin.cost !== undefined) | (coin.amount !== undefined) ? (
-            <div
-              className={
-                profitOrLoss > 0
-                  ? "profit"
-                  : profitOrLoss < 0
-                  ? "loss"
-                  : profitOrLoss === 0 && "even"
-              }
-            >
-              <span className="price">Profit / Loss</span>
+            <div>
+              <span>Profit / Loss</span>
               <p>
                 {new Intl.NumberFormat("en-IN", {
                   style: "currency",
@@ -98,6 +90,7 @@ const Coin = ({ coin, onDelete, updateCoin }) => {
             onClick={() => {
               onDelete(coin.id);
             }}
+            size="30"
           />
         </div>
       </div>

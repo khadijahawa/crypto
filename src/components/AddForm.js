@@ -42,15 +42,23 @@ const AddForm = ({ toggleForm, coin, updateCoin }) => {
   return transition(
     (style, item) =>
       item && (
-        <>
+        <div className={styles.coin} style={{ width: "94%", padding: "3%" }}>
           <form
             style={style}
             onSubmit={displayWorth}
             className={styles.containerzz}
           >
-            <BsXCircleFill onClick={toggleForm} />
-            <p style={{ fontWeight: "bold" }}>{coin.name}</p>
-            <label className={styles.homeText}>Cost per coin:</label>
+            <BsXCircleFill onClick={toggleForm} size="30" />
+            <p
+              style={{
+                fontWeight: "bold",
+                color: "#0071bd",
+                fontSize: "30px",
+              }}
+            >
+              {coin.name}
+            </p>
+            <label style={{ fontWeight: "bold" }}>Cost per coin:</label>
             <input
               step="any"
               type="number"
@@ -62,7 +70,7 @@ const AddForm = ({ toggleForm, coin, updateCoin }) => {
               }}
               className={styles.btnPart}
             />
-            <label className={styles.homeText}>Amount bought:</label>
+            <label style={{ fontWeight: "bold" }}>Amount bought:</label>
             <input
               type="number"
               maxLength="10"
@@ -76,7 +84,7 @@ const AddForm = ({ toggleForm, coin, updateCoin }) => {
             />
             <input type="submit" value="Add coin" className={styles.addCoin} />
           </form>
-        </>
+        </div>
       )
   );
 };
